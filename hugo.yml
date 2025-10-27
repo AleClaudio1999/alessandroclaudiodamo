@@ -1,4 +1,6 @@
-baseURL: "https://alessandroclaudiodamo.github.io/"
+baseURL: "https://AleClaudio1999.github.io/alessandroclaudiodamo/"
+relativeURLs = true
+canonifyURLs = true
 title: ExampleSite
 pagination:
   pagerSize: 5
