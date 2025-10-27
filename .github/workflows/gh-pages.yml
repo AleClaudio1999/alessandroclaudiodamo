@@ -1,0 +1,31 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # branch principale con il codice sorgente Hugo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Clona il repository
+      - uses: actions/checkout@v3
+
+      # 2. Installa Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.152.2'  # usa la versione che funziona in locale
+
+      # 3. Costruisci il sito
+      - name: Build Hugo site
+        run: hugo --minify
+
+      # 4. Pubblica su GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+
