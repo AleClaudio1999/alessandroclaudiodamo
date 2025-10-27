@@ -1,7 +1,7 @@
 +++
-date = '2025-10-27T01:10:48+01:00'
-draft = true
+draft = false
 title = 'Curriculum vitae'
+
 +++
 
 Questo è il mio curriculum vitae:
