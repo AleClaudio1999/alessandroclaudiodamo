@@ -1,5 +1,5 @@
 baseURL: "https://AleClaudio1999.github.io/alessandroclaudiodamo/"
-title: ExampleSite
+title: AlessandroClaudioDamo
 pagination:
   pagerSize: 5
 theme: PaperMod
@@ -8,6 +8,10 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
+relativeURLs : true
+canonifyURLs : true
+googleAnalytics : ""
+
 
 minify:
   disableXML: true
