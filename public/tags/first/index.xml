@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>First on ExampleSite</title>
+    <link>https://alessandroclaudiodamo.github.io/tags/first/</link>
+    <description>Recent content in First on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://alessandroclaudiodamo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://alessandroclaudiodamo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Sep 2025 11:30:03 +0000</lastBuildDate>
+    <atom:link href="https://alessandroclaudiodamo.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cross-core interference - An Ubuntu and OpenEuler experience</title>
+      <link>https://alessandroclaudiodamo.github.io/portfolio/progetto1/</link>
+      <pubDate>Mon, 15 Sep 2025 11:30:03 +0000</pubDate>
+      <guid>https://alessandroclaudiodamo.github.io/portfolio/progetto1/</guid>
+      <description>Lavoro conclusivo per il corso di Real-Time Kernel and Systems</description>
+    </item>
+    <item>
+      <title>Analisi di Logseq</title>
+      <link>https://alessandroclaudiodamo.github.io/portfolio/progetto2/</link>
+      <pubDate>Thu, 15 Sep 2022 11:30:03 +0000</pubDate>
+      <guid>https://alessandroclaudiodamo.github.io/portfolio/progetto2/</guid>
+      <description>Lavoro conclusivo per il corso di Ingegneria del software</description>
+    </item>
+  </channel>
+</rss>

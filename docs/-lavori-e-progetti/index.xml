@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Lavori e progetti on Alessandro Claudio Damo</title>
+    <link>http://localhost:1313/-lavori-e-progetti/</link>
+    <description>Recent content in Lavori e progetti on Alessandro Claudio Damo</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>it-it</language>
+    <managingEditor>none@example.org (Alessandro Claudio Damo)</managingEditor>
+    <webMaster>none@example.org (Alessandro Claudio Damo)</webMaster>
+    <atom:link href="http://localhost:1313/-lavori-e-progetti/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analisi di Logseq</title>
+      <link>http://localhost:1313/-lavori-e-progetti/progetto2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>none@example.org (Alessandro Claudio Damo)</author>
+      <guid>http://localhost:1313/-lavori-e-progetti/progetto2/</guid>
+      <description>&lt;h3 id=&#34;introduzione-su-logseq&#34;&gt;Introduzione su Logseq&lt;/h3&gt;
+&lt;p&gt;Logseq è una piattaforma per la gestione della propria conoscenza&lt;/p&gt;
+&lt;p&gt;attraverso la gestione di un database di file di testo (qui chiamati&lt;/p&gt;
+&lt;p&gt;singolarmente pagine) e possibili allegati, con inoltre la&lt;/p&gt;
+&lt;p&gt;possibilità di collegare e relazionare pagine e quindi concetti tra&lt;/p&gt;
+&lt;p&gt;di loro; facendo ciò si crea il cosiddetto grafo di conoscenza, che&lt;/p&gt;
+&lt;p&gt;permette di visualizzare al meglio i concetti e le loro relazioni.&lt;/p&gt;
+&lt;p&gt;Inoltre, possiamo utilizzare i file Markdown o la modalità org&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cross-core interference - An Ubuntu and OpenEuler experience </title>
+      <link>http://localhost:1313/-lavori-e-progetti/progetto1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>none@example.org (Alessandro Claudio Damo)</author>
+      <guid>http://localhost:1313/-lavori-e-progetti/progetto1/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Based on:&lt;/strong&gt; “Interference-free Operating System: A 6 Years’ Experience in Mitigating Cross-Core Interference in Linux” (RTSS 2024)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keywords&lt;/strong&gt;: &lt;em&gt;real-time systems, Linux kernel, interference, multicore isolation, schedulability&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CCS Concepts&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Computer systems organization → &lt;em&gt;Real-time operating systems&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Software and its engineering → &lt;em&gt;Scheduling&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Computer systems organization → &lt;em&gt;Multicore architectures&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Software and its engineering → &lt;em&gt;Operating systems&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;This work presents the experimental replication of selected studies described in the paper &lt;em&gt;“Interference-Free Operating System: A 6 Years’ Experience in Mitigating Cross-Core Interference in Linux”&lt;/em&gt; (RTSS 2024), with the goal of assessing their validity across different hardware platforms and operating systems. In particular, the core isolation mechanisms listed in Table III of the paper were systematically applied on three kernels: kernel: Linux &amp;ldquo;Vanilla&amp;rdquo; 5.10, LinuxRT 5.10 and Openeuler 22.03 (based on Linux 5.10) , while carefully documenting procedures, challenges, and practical limitations. Subsequently, experiments were conducted to measure maximum latency (&lt;em&gt;cyclictest&lt;/em&gt;), latency distribution (&lt;em&gt;cyclictest&lt;/em&gt; and &lt;em&gt;oslat&lt;/em&gt;), task-set schedulability and communication latency in ROS 2. The results show that openEuler, while not completely eliminating cross-core interference, achieves lower latencies and more stable performance compared to Linux &amp;ldquo;Vanilla&amp;rdquo;, and results better but more similar to the RT kernel. The analysis further highlights that, despite the intrinsic limitations of Linux, the adoption of appropriate isolation mechanisms and specific kernel patches can significantly mitigate the impact of interference. The contribution of this work lies not only in the empirical confirmation of the paper’s claims, but also in providing a practical guide for researchers and developers interested in replicating or extending these experiments.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
