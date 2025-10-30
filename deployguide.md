@@ -1,3 +1,4 @@
+```
 name: Build and deploy
 on:
   push:
@@ -104,7 +105,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
+```
 
 
 Poi ricordati su Build and deployment di mettere su source github actions
