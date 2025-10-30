@@ -6,5 +6,5 @@ title = 'Portfolio'
 
 Qui puoi vedere i miei lavori e progetti principali:
 
-- [Cross-core interference - An Ubuntu and OpenEuler experience](/portfolio/progetto1/) *Progetto per "Real-Time Kernels and Systems"*
-- [Analisi di Logseq](/portfolio/progetto2/) *Progetto per "Ingegneria del Software"*
+- [Cross-core interference - An Ubuntu and OpenEuler experience]({{< ref "portfolio/progetto1.md" >}}) *Progetto per "Real-Time Kernels and Systems"*
+- [Analisi di Logseq]({{< ref "portfolio/progetto2.md" >}}) *Progetto per "Ingegneria del Software"*
