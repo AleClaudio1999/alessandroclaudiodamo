@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>AlessandroClaudioDamo</title>
-    <link>https://AleClaudio1999.github.io/alessandroclaudiodamo/contatti/</link>
-    <description>Recent content on AlessandroClaudioDamo</description>
-    <image>
-      <title>AlessandroClaudioDamo</title>
-      <url>https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en</language>
-    <atom:link href="https://AleClaudio1999.github.io/alessandroclaudiodamo/contatti/index.xml" rel="self" type="application/rss+xml" />
+    <title>Alessandro Claudio Damo</title>
+    <link>http://localhost:1313/contatti/</link>
+    <description>Recent content on Alessandro Claudio Damo</description>
+    <generator>Hugo -- 0.150.0</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/contatti/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

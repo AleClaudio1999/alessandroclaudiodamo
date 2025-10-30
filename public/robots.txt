@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://AleClaudio1999.github.io/alessandroclaudiodamo/sitemap.xml
+Sitemap: http://localhost:1313/alessandroclaudiodamo/sitemap.xml

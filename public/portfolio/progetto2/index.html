@@ -1,54 +1,542 @@
-<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Analisi di Logseq | AlessandroClaudioDamo</title><meta name=keywords content="first"><meta name=description content="Lavoro conclusivo per il corso di Ingegneria del software"><meta name=author content="Me"><link rel=canonical href=https://canonical.url/to/page><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=../../alessandroclaudiodamo/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css integrity="sha256-NDzEgLn/yPBMy+XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as=style><link rel=icon href=https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://AleClaudio1999.github.io/alessandroclaudiodamo/portfolio/progetto2/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><meta property="og:url" content="https://AleClaudio1999.github.io/alessandroclaudiodamo/portfolio/progetto2/"><meta property="og:site_name" content="AlessandroClaudioDamo"><meta property="og:title" content="Analisi di Logseq"><meta property="og:description" content="Lavoro conclusivo per il corso di Ingegneria del software"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="portfolio"><meta property="article:published_time" content="2022-09-15T11:30:03+00:00"><meta property="article:modified_time" content="2022-09-15T11:30:03+00:00"><meta property="article:tag" content="First"><meta property="og:image" content="https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Cimage%20path/url%3E"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Cimage%20path/url%3E"><meta name=twitter:title content="Analisi di Logseq"><meta name=twitter:description content="Lavoro conclusivo per il corso di Ingegneria del software"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Portfolio","item":"https://AleClaudio1999.github.io/alessandroclaudiodamo/portfolio/"},{"@type":"ListItem","position":2,"name":"Analisi di Logseq","item":"https://AleClaudio1999.github.io/alessandroclaudiodamo/portfolio/progetto2/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Analisi di Logseq","name":"Analisi di Logseq","description":"Lavoro conclusivo per il corso di Ingegneria del software","keywords":["first"],"articleBody":"Introduzione su Logseq Logseq è una piattaforma per la gestione della propria conoscenza attraverso un database di file di testo (chiamati “pagine”) e relativi allegati. Consente di collegare e relazionare pagine — e quindi concetti — tra loro, creando così il grafo di conoscenza, che permette di visualizzare al meglio le connessioni tra le idee.\nÈ possibile utilizzare file Markdown o la modalità Org per scrivere, modificare e salvare facilmente nuove note.\nLogseq non è il primo tool di questo tipo, ma a differenza dei concorrenti (come i più noti Roam Research e Obsidian) è completamente gratuito e si concentra su privacy, longevità e controllo da parte dell’utente, grazie alla sua natura open source.\nAttualmente il programma è ancora in beta; al momento della stesura si trova nella versione stable 0.8.2. È disponibile per Windows, Mac e Linux, ed esiste anche una web app utilizzabile direttamente dal browser.\nSuperamento dei criteri di scelta del progetto Scaricando il sorgente da Github (https://github.com/logseq/logseq) e grazie al tool gratuito cloc (https://github.com/AlDanial/cloc) ho contato il numero di LOC del programma affinché superassero le 50KLOC previste dalla consegna: le LOC sono risultate 59549 cosi suddivise.\nLinguaggio Linee di codice Commenti Blank Altro ClojureScript 45 166 249 5 824 1 465 ClojureC 8 316 12 393 65 CSS 5 289 31 1 116 45 JavaScript 709 – – – Clojure 69 6 4 97 Altro 7 40 1 – Totale: 59 549 linee\nIntroduzione all’analisi del processo di produzione Logseq è un progetto open source con licenza AGPL-3.0, sviluppato dall’omonimo team composto da circa 10 personeche lavorano in remoto, da diverse parti del mondo e con orari asincroni.\nPer analizzare al meglio il processo di produzione di Logseq, partiremo dalla sua attuale release e cercheremo di capire da dove nascono e come vengono sviluppate le nuove feature.\nInoltre, daremo un’occhiata anche all’ambito finanziario, per comprendere come il team si finanzi e come questo influisca sui progetti a lungo termine.\nAnalizzeremo il ruolo della community all’interno del progetto, e come essa collabori con il team sia per lo sviluppo di plugin, sia per il report di problemi e bug.\nEsamineremo poi l’architettura del programma, il modo in cui le nuove feature si interfacciano con essa e come l’architettura si sia evoluta nel tempo.\nInfine, concluderemo guardando la presentazione del team, i loro valori e la loro filosofia lavorativa, con particolare enfasi sulla metodologia di comunicazione, cercando di individuare eventuali correlazioni con l’Extreme Programming (XP).\nDa dove nascono le nuove feature? Per l’ideazione di nuove feature, il team di Logseq si rivolge spesso alla community, attraverso il proprio forum di discussione: 👉 https://discuss.logseq.com\nAll’interno del forum esiste una sezione chiamata “Feature Request”, dove qualsiasi utente registrato può proporre nuove funzionalità attraverso un post pubblico. Con un sistema simile a Reddit, i post possono essere votati, permettendo così ai main developer di stabilire la priorità delle richieste in base al loro successo nella community.\n📌 Esempio: Un utente ha chiesto l’introduzione degli Headings (titoli più grandi) in questo post: 👉 Headings where they at?\nIl post ha ricevuto molti commenti e voti, e nel giro di 5 mesi la funzionalità è stata effettivamente implementata nel programma.\nAnche le richieste su GitHub sono attive, ma vengono automaticamente reindirizzate al forum, così da raccogliere voti e misurare meglio l’interesse degli utenti (funzionalità che GitHub non offre nativamente).\n📌 Altro esempio: Un utente ha proposto la personalizzazione delle scorciatoie da tastiera in questo post: 👉 Customizable keyboard shortcuts La proposta era stata inizialmente fatta su GitHub: 👉 Issue #553 su GitHub\nOltre alle idee provenienti dalla community, il team di sviluppo concepisce anche feature interne, non presenti né sul blog né su GitHub. Questo accade perché il team ha una visione a lungo termine del progetto e anche un piano per sostenersi economicamente, come vedremo più avanti.\nIn sintesi:\nLe piccole feature sono spesso guidate dalla community. Le funzionalità più grandi o strategiche sono invece dirette dal team di sviluppo. Dalle idee alla realizzazione Le idee o feature, provenienti sia dalla community che dal team, devono essere definite e pianificate prima della realizzazione. Per farlo, il team utilizza il metodo delle “Cards”.\n🔹 Le “Cards” Una Card rappresenta visivamente un’attività o una feature. Contiene informazioni come:\nil riepilogo dell’incarico, la persona responsabile, eventuali scadenze o checklist. Nel caso di Logseq, le Cards sono molto semplici, spesso con pochi commenti e tag. Per lavori più complessi, includono liste di compiti da completare. Non sono invece definiti test espliciti da superare, anche se ogni lavoro viene revisionato da un altro membro del team.\n🔹 Kanban Board Le Cards vengono organizzate in una tabella Kanban, uno strumento visivo che mostra lo stato dei lavori. La board è divisa in 4 colonne:\nTo-Do Doing Done Long Term 📍 È consultabile pubblicamente su Trello: 👉 Logseq Roadmap su Trello\nQuando una Card viene creata, entra nella colonna To-Do. Un membro del team può assegnarsela, spostandola in Doing. Durante lo sviluppo, viene creato un branch separato dal master per lavorare sulla nuova feature.\nUna volta completata, la Card entra nella fase di Code Review, dove un altro sviluppatore deve obbligatoriamente verificarla. Esiste anche un parametro chiamato List Limit: se ci sono troppe Card in revisione, il team dà priorità alle review rispetto a nuovi lavori.\nDopo la revisione e i test, la Card viene spostata su Done, e il codice viene unito al branch principale. Il rilascio avviene prima in versione Early Access, poi nella versione stabile.\n🔹 Caso speciale: la “Whiteboard” Una menzione a parte merita la feature Whiteboard, progettata come una componente complessa ed esclusiva. Per essa è stata creata una Kanban Board dedicata su GitHub: 👉 Whiteboard Project Board\nIn passato, la Kanban principale si trovava su GitHub: 👉 Vecchia roadmap (dismessa) ma dal 2020 è stata spostata definitivamente su Trello.\nBug Anche per la gestione di bug e problemi, Logseq si affida molto alla community. I developer prediligono la sezione “Issues” di GitHub per la segnalazione di fix o bug:\n👉 https://github.com/logseq/logseq/issues\nPer la risoluzione, sia i developer che la community possono lavorare direttamente sul codice e poi richiedere un pull request sul master branch. Solitamente, di queste operazioni si occupano membri interni del team o sviluppatori selezionati.\nÈ possibile anche utilizzare il blog ufficiale (che ha una sezione dedicata ai bug report) oppure i canali Discord, dove gli sviluppatori sono attivi e disponibili per assistenza diretta:\n👉 Post ufficiale: Please post bug reports to GitHub if you can\nAmbito economico del progetto Logseq è un progetto open source con licenza AGPL-3.0, quindi completamente gratuito. Per supportare il team, è possibile effettuare donazioni una tantum o ricorrenti tramite la piattaforma Open Collective:\n👉 https://opencollective.com/logseq\nIn base all’importo donato, si possono ottenere vantaggi esclusivi, come:\naccesso alle versioni Early Access, badge su Discord, menzioni come sponsor sul sito ufficiale e sulla pagina GitHub. Il progetto è nato dalla mente del developer Tienson, inizialmente finanziato da Angel Investors. Attualmente il team è composto da 10 developer, con compensi annuali e una quota di equity sul progetto.\nInoltre, Logseq ha ricevuto investimenti da grandi nomi del settore tech, tra cui: Airbnb, Instagram, Quora, Neuralink, SpaceX, Facebook, Stripe, GitHub, Shopify, Uber e AngelList. (📄 Fonte: Design \u0026 Frontend Engineer – Notion Page)\nNonostante questo, il reddito attuale non è ancora sufficiente, e tra gli obiettivi futuri c’è quello di aumentare la monetizzazione.\nIl team prevede infatti di lanciare una versione Logseq Pro, a pagamento e closed source, con vantaggi come:\ndatabase sincronizzato tra dispositivi su server proprietari (sul modello di Roam Research), feature esclusive anche per chi sceglie di mantenere un database locale. In futuro, quindi, Logseq si dividerà in due rami:\nLogseq Pro → closed source e a pagamento Logseq Standard → open source e gratuito, costantemente mantenuto 📚 Riferimenti:\nFAQ ufficiale Discussione: What is Logseq’s business model? Community La community gioca un ruolo fondamentale non solo nell’ideazione di nuove feature, ma anche nella segnalazione di bug e nella collaborazione tecnica.\nPer quanto riguarda lo sviluppo, la community può contribuire attraverso la creazione di plugin. Anche se, in teoria, chiunque può modificare il codice sorgente (essendo open source), la **branch principale (master)**rimane sotto il controllo del team ufficiale.\n🔹 Requisiti per i plugin I plugin devono:\nGarantire privacy e sicurezza dei dati dell’utente. Non duplicare funzionalità già presenti nel programma. Per pubblicare un plugin, basta creare un fork del repository e inviare una pull request al progetto Marketplace Packagessu GitHub: 👉 https://github.com/logseq/marketplace\nI plugin approvati vengono automaticamente inseriti nel marketplace integrato nel programma, completamente gratuito.\n🔹 Contributi alla documentazione La community contribuisce anche alla documentazione, sia interna che esterna.\nDocumentazione interna: tutorial e linee guida integrate nel programma. → Contributo via fork + pull request su GitHub. Documentazione esterna: articoli, guide e contenuti su blog o piattaforme esterne. → Partecipazione libera attraverso il forum. 📚 Riferimenti:\nHow to contribute to Logseq’s documentation (post 1) How to contribute to Logseq’s documentation (post 2) Architettura In origine, l’architettura di Logseq era monolitica: ogni nuova feature o componente interagiva direttamente con il Datascript, limitando la modularità e la scalabilità del codice.\nPer risolvere questi problemi, il team ha effettuato un profondo refactoring. Attualmente, Logseq è composto da due principali componenti:\nLogseq Plugin Core – interfaccia tra i plugin e il sistema principale. Logseq Core – motore dell’applicazione, gestisce editing, blocchi e funzioni base. I plugin della community interagiscono con il Plugin Core. Gli Official Plugins, invece, comunicano direttamente con il Core (es. motore di ricerca, temi base, ecc.). Questa architettura modulare consente:\nmaggiore sicurezza nell’esecuzione dei plugin, sviluppo più isolato e indipendente delle singole componenti, miglior gestione degli errori e delle nuove feature. 📚 Riferimento: [The Refactoring of Logseq](https://docs.logseq.com/#/page/The Refactoring Of Logseq)\nValori, metodologia di lavoro e correlazioni con l’XP La filosofia e la metodologia di lavoro del team Logseq sono descritte nella seguente pagina: 👉 Who is Logseq – Notion\nPur non dichiarando esplicitamente l’adesione all’Extreme Programming (XP), si possono notare molte analogie.\n🔹 Comunicazione “Noi condividiamo apertamente, ampiamente e deliberatamente e siamo straordinariamente sinceri gli uni con gli altri.”\nIl team lavora in modo asincrono, da luoghi e fusi orari diversi. La comunicazione avviene quindi tramite note e messaggi scritti, che rendono più diretto e veloce lo scambio di idee.\nTutti possono comunicare con chiunque — anche l’ultimo programmatore con il cliente — proprio come nel modello XP. Questo approccio genera feedback continui e immediati, sia con la community sia all’interno del team.\n📍 Forum: https://discuss.logseq.com\n🔹 Valori condivisi Coraggio e libertà di sperimentare:\n“Il rischio è direttamente proporzionale all’impatto.” Come nell’XP, serve coraggio nel prendere decisioni importanti e nell’ammettere eventuali errori passati.\nRitmo sostenibile:\n“È una maratona, non uno sprint.” Il lavoro è flessibile e bilanciato: ferie pagate, incentivi per studio e salute, piani assicurativi, ecc.\nAction-Oriented: Il team privilegia un approccio pratico e iterativo, con release frequenti e leggere.\n📈 Esempio su GitHub:\nv0.8.2 → rilasciata 6 giorni fa v0.8.1 → 12 giorni fa v0.8.0 → 20 giorni fa 👉 Changelog su GitHub 🔹 Organizzazione del lavoro Il flusso di lavoro è strutturato come nell’XP:\nattività rappresentate da Cards, gestione tramite tabella Kanban, focus su refactoring continuo e miglioramento del codice. Un grande refactoring ha già portato a un’architettura più pulita e performante, ma il team continua a ottimizzare:\ncaricamento di pagine molto grandi, reattività delle query, uso della memoria oltre 10k note, gestione delle pagine lunghe. 📍 Card di riferimento su Trello\nIl core di Logseq gestisce numerose operazioni su file, stringhe e caratteri Unicode, quindi la performance è un aspetto fondamentale e costantemente monitorato.\n🔹 Pair Programming L’unico aspetto mancante rispetto all’XP è il pair programming, quasi impossibile da applicare in un team completamente remoto e asincrono. Infatti, nella Kanban board, a ogni Card è solitamente assegnato un solo sviluppatore.\n📚 Ulteriore riferimento: [The Refactoring of Logseq](https://docs.logseq.com/#/page/The Refactoring Of Logseq)\n","wordCount":"1966","inLanguage":"en","image":"https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Cimage%20path/url%3E","datePublished":"2022-09-15T11:30:03Z","dateModified":"2022-09-15T11:30:03Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://AleClaudio1999.github.io/alessandroclaudiodamo/portfolio/progetto2/"},"publisher":{"@type":"Organization","name":"AlessandroClaudioDamo","logo":{"@type":"ImageObject","url":"https://AleClaudio1999.github.io/alessandroclaudiodamo/%3Clink%20/%20abs%20url%3E"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://AleClaudio1999.github.io/alessandroclaudiodamo/ accesskey=h title="Home (Alt + H)"><img src=https://AleClaudio1999.github.io/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
-<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://AleClaudio1999.github.io/contatti/ title=Contatti><span>Contatti</span></a></li><li><a href=https://AleClaudio1999.github.io/portfolio/ title=Portfolio><span>Portfolio</span></a></li><li><a href=https://AleClaudio1999.github.io/cv/ title=CV><span>CV</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://AleClaudio1999.github.io/alessandroclaudiodamo/>Home</a>&nbsp;»&nbsp;<a href=https://AleClaudio1999.github.io/alessandroclaudiodamo/portfolio/>Portfolio</a></div><h1 class="post-title entry-hint-parent">Analisi di Logseq</h1><div class=post-description>Lavoro conclusivo per il corso di Ingegneria del software</div><div class=post-meta><span title='2022-09-15 11:30:03 +0000 +0000'>September 15, 2022</span>&nbsp;·&nbsp;<span>10 min</span>&nbsp;·&nbsp;<span>1966 words</span>&nbsp;·&nbsp;<span>Me</span>&nbsp;|&nbsp;<span>
-<a href=https://github.com/%3cpath_to_repo%3e/content/Portfolio/progetto2.md rel="noopener noreferrer edit" target=_blank>Suggest Changes</a></span></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents><ul><li><ul><li><a href=#introduzione-su-logseq>Introduzione su Logseq</a></li><li><a href=#superamento-dei-criteri-di-scelta-del-progetto>Superamento dei criteri di scelta del progetto</a></li><li><a href=#introduzione-allanalisi-del-processo-di-produzione>Introduzione all’analisi del processo di produzione</a></li><li><a href=#da-dove-nascono-le-nuove-feature>Da dove nascono le nuove feature?</a></li><li><a href=#dalle-idee-alla-realizzazione>Dalle idee alla realizzazione</a></li><li><a href=#bug>Bug</a></li><li><a href=#ambito-economico-del-progetto>Ambito economico del progetto</a></li><li><a href=#community>Community</a></li><li><a href=#architettura>Architettura</a></li><li><a href=#valori-metodologia-di-lavoro-e-correlazioni-con-lxp>Valori, metodologia di lavoro e correlazioni con l’XP</a></li></ul></li></ul></nav></div></details></div><div class=post-content><h3 id=introduzione-su-logseq>Introduzione su Logseq<a hidden class=anchor aria-hidden=true href=#introduzione-su-logseq>#</a></h3><p>Logseq è una piattaforma per la gestione della propria conoscenza attraverso un database di file di testo (chiamati “pagine”) e relativi allegati.
-Consente di collegare e relazionare pagine — e quindi concetti — tra loro, creando così il <strong>grafo di conoscenza</strong>, che permette di visualizzare al meglio le connessioni tra le idee.</p><p>È possibile utilizzare file <strong>Markdown</strong> o la modalità <strong>Org</strong> per scrivere, modificare e salvare facilmente nuove note.</p><p>Logseq non è il primo tool di questo tipo, ma a differenza dei concorrenti (come i più noti <strong>Roam Research</strong> e <strong>Obsidian</strong>) è <strong>completamente gratuito</strong> e si concentra su <strong>privacy</strong>, <strong>longevità</strong> e <strong>controllo da parte dell’utente</strong>, grazie alla sua natura <strong>open source</strong>.</p><p>Attualmente il programma è ancora in <strong>beta</strong>; al momento della stesura si trova nella versione <strong>stable 0.8.2</strong>.
-È disponibile per <strong>Windows</strong>, <strong>Mac</strong> e <strong>Linux</strong>, ed esiste anche una <strong>web app</strong> utilizzabile direttamente dal browser.</p><h3 id=superamento-dei-criteri-di-scelta-del-progetto>Superamento dei criteri di scelta del progetto<a hidden class=anchor aria-hidden=true href=#superamento-dei-criteri-di-scelta-del-progetto>#</a></h3><p>Scaricando il sorgente da Github (<a href=https://github.com/logseq/logseq>https://github.com/logseq/logseq</a>) e grazie al tool gratuito cloc (<a href=https://github.com/AlDanial/cloc>https://github.com/AlDanial/cloc</a>) ho contato il numero di LOC del programma affinché superassero le 50KLOC previste dalla consegna: le LOC sono risultate 59549 cosi suddivise.</p><table><thead><tr><th>Linguaggio</th><th>Linee di codice</th><th>Commenti</th><th>Blank</th><th>Altro</th></tr></thead><tbody><tr><td>ClojureScript</td><td>45 166</td><td>249</td><td>5 824</td><td>1 465</td></tr><tr><td>ClojureC</td><td>8 316</td><td>12</td><td>393</td><td>65</td></tr><tr><td>CSS</td><td>5 289</td><td>31</td><td>1 116</td><td>45</td></tr><tr><td>JavaScript</td><td>709</td><td>–</td><td>–</td><td>–</td></tr><tr><td>Clojure</td><td>69</td><td>6</td><td>4</td><td>97</td></tr><tr><td>Altro</td><td>7</td><td>40</td><td>1</td><td>–</td></tr></tbody></table><p><strong>Totale:</strong> 59 549 linee</p><h3 id=introduzione-allanalisi-del-processo-di-produzione>Introduzione all’analisi del processo di produzione<a hidden class=anchor aria-hidden=true href=#introduzione-allanalisi-del-processo-di-produzione>#</a></h3><p>Logseq è un progetto <strong>open source</strong> con licenza <strong>AGPL-3.0</strong>, sviluppato dall’omonimo team composto da circa <strong>10 persone</strong>che lavorano <strong>in remoto</strong>, da diverse parti del mondo e con orari <strong>asincroni</strong>.</p><p>Per analizzare al meglio il <strong>processo di produzione di Logseq</strong>, partiremo dalla sua attuale release e cercheremo di capire <strong>da dove nascono</strong> e <strong>come vengono sviluppate</strong> le nuove feature.</p><p>Inoltre, daremo un’occhiata anche all’<strong>ambito finanziario</strong>, per comprendere come il team si finanzi e come questo influisca sui progetti a lungo termine.</p><p>Analizzeremo il <strong>ruolo della community</strong> all’interno del progetto, e come essa collabori con il team sia per lo sviluppo di <strong>plugin</strong>, sia per il <strong>report di problemi e bug</strong>.</p><p>Esamineremo poi l’<strong>architettura del programma</strong>, il modo in cui le nuove feature si interfacciano con essa e come l’architettura si sia evoluta nel tempo.</p><p>Infine, concluderemo guardando la <strong>presentazione del team</strong>, i loro <strong>valori</strong> e la loro <strong>filosofia lavorativa</strong>, con particolare enfasi sulla <strong>metodologia di comunicazione</strong>, cercando di individuare eventuali correlazioni con l’<strong>Extreme Programming (XP)</strong>.</p><h3 id=da-dove-nascono-le-nuove-feature>Da dove nascono le nuove feature?<a hidden class=anchor aria-hidden=true href=#da-dove-nascono-le-nuove-feature>#</a></h3><p>Per l’ideazione di nuove feature, il team di Logseq si rivolge spesso alla <strong>community</strong>, attraverso il proprio <strong>forum di discussione</strong>:
-👉 <a href=https://discuss.logseq.com/>https://discuss.logseq.com</a></p><p>All’interno del forum esiste una sezione chiamata <strong>“Feature Request”</strong>, dove qualsiasi utente registrato può proporre nuove funzionalità attraverso un post pubblico.
-Con un sistema simile a <strong>Reddit</strong>, i post possono essere <strong>votati</strong>, permettendo così ai <strong>main developer</strong> di stabilire la priorità delle richieste in base al loro successo nella community.</p><p>📌 <strong>Esempio:</strong>
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Analisi di Logseq | Alessandro Claudio Damo</title>
+<meta name="keywords" content="first">
+<meta name="description" content="Lavoro conclusivo per il corso di Ingegneria del software">
+<meta name="author" content="">
+<link rel="canonical" href="https://canonical.url/to/page">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/portfolio/progetto2/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Alessandro Claudio Damo (Alt + H)">Alessandro Claudio Damo</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/contatti/" title="Contatti">
+                    <span>Contatti</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/portfolio/" title="Portfolio">
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/cv/" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/portfolio/">Portfolio</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Analisi di Logseq
+    </h1>
+    <div class="post-description">
+      Lavoro conclusivo per il corso di Ingegneria del software
+    </div>
+    <div class="post-meta"><span title='2022-09-15 11:30:03 +0000 +0000'>September 15, 2022</span>&nbsp;·&nbsp;<span>10 min</span>&nbsp;·&nbsp;<span>1966 words</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#introduzione-su-logseq">Introduzione su Logseq</a></li>
+        <li><a href="#superamento-dei-criteri-di-scelta-del-progetto">Superamento dei criteri di scelta del progetto</a></li>
+        <li><a href="#introduzione-allanalisi-del-processo-di-produzione">Introduzione all’analisi del processo di produzione</a></li>
+        <li><a href="#da-dove-nascono-le-nuove-feature">Da dove nascono le nuove feature?</a></li>
+        <li><a href="#dalle-idee-alla-realizzazione">Dalle idee alla realizzazione</a></li>
+        <li><a href="#bug">Bug</a></li>
+        <li><a href="#ambito-economico-del-progetto">Ambito economico del progetto</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#architettura">Architettura</a></li>
+        <li><a href="#valori-metodologia-di-lavoro-e-correlazioni-con-lxp">Valori, metodologia di lavoro e correlazioni con l’XP</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h3 id="introduzione-su-logseq">Introduzione su Logseq<a hidden class="anchor" aria-hidden="true" href="#introduzione-su-logseq">#</a></h3>
+<p>Logseq è una piattaforma per la gestione della propria conoscenza attraverso un database di file di testo (chiamati “pagine”) e relativi allegati.
+Consente di collegare e relazionare pagine — e quindi concetti — tra loro, creando così il <strong>grafo di conoscenza</strong>, che permette di visualizzare al meglio le connessioni tra le idee.</p>
+<p>È possibile utilizzare file <strong>Markdown</strong> o la modalità <strong>Org</strong> per scrivere, modificare e salvare facilmente nuove note.</p>
+<p>Logseq non è il primo tool di questo tipo, ma a differenza dei concorrenti (come i più noti <strong>Roam Research</strong> e <strong>Obsidian</strong>) è <strong>completamente gratuito</strong> e si concentra su <strong>privacy</strong>, <strong>longevità</strong> e <strong>controllo da parte dell’utente</strong>, grazie alla sua natura <strong>open source</strong>.</p>
+<p>Attualmente il programma è ancora in <strong>beta</strong>; al momento della stesura si trova nella versione <strong>stable 0.8.2</strong>.
+È disponibile per <strong>Windows</strong>, <strong>Mac</strong> e <strong>Linux</strong>, ed esiste anche una <strong>web app</strong> utilizzabile direttamente dal browser.</p>
+<h3 id="superamento-dei-criteri-di-scelta-del-progetto">Superamento dei criteri di scelta del progetto<a hidden class="anchor" aria-hidden="true" href="#superamento-dei-criteri-di-scelta-del-progetto">#</a></h3>
+<p>Scaricando il sorgente da Github (<a href="https://github.com/logseq/logseq">https://github.com/logseq/logseq</a>) e grazie al tool gratuito cloc (<a href="https://github.com/AlDanial/cloc">https://github.com/AlDanial/cloc</a>) ho contato il numero di LOC del programma affinché superassero le 50KLOC previste dalla consegna: le LOC sono risultate 59549 cosi suddivise.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Linguaggio</th>
+          <th>Linee di codice</th>
+          <th>Commenti</th>
+          <th>Blank</th>
+          <th>Altro</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ClojureScript</td>
+          <td>45 166</td>
+          <td>249</td>
+          <td>5 824</td>
+          <td>1 465</td>
+      </tr>
+      <tr>
+          <td>ClojureC</td>
+          <td>8 316</td>
+          <td>12</td>
+          <td>393</td>
+          <td>65</td>
+      </tr>
+      <tr>
+          <td>CSS</td>
+          <td>5 289</td>
+          <td>31</td>
+          <td>1 116</td>
+          <td>45</td>
+      </tr>
+      <tr>
+          <td>JavaScript</td>
+          <td>709</td>
+          <td>–</td>
+          <td>–</td>
+          <td>–</td>
+      </tr>
+      <tr>
+          <td>Clojure</td>
+          <td>69</td>
+          <td>6</td>
+          <td>4</td>
+          <td>97</td>
+      </tr>
+      <tr>
+          <td>Altro</td>
+          <td>7</td>
+          <td>40</td>
+          <td>1</td>
+          <td>–</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Totale:</strong> 59 549 linee</p>
+<h3 id="introduzione-allanalisi-del-processo-di-produzione">Introduzione all’analisi del processo di produzione<a hidden class="anchor" aria-hidden="true" href="#introduzione-allanalisi-del-processo-di-produzione">#</a></h3>
+<p>Logseq è un progetto <strong>open source</strong> con licenza <strong>AGPL-3.0</strong>, sviluppato dall’omonimo team composto da circa <strong>10 persone</strong>che lavorano <strong>in remoto</strong>, da diverse parti del mondo e con orari <strong>asincroni</strong>.</p>
+<p>Per analizzare al meglio il <strong>processo di produzione di Logseq</strong>, partiremo dalla sua attuale release e cercheremo di capire <strong>da dove nascono</strong> e <strong>come vengono sviluppate</strong> le nuove feature.</p>
+<p>Inoltre, daremo un’occhiata anche all’<strong>ambito finanziario</strong>, per comprendere come il team si finanzi e come questo influisca sui progetti a lungo termine.</p>
+<p>Analizzeremo il <strong>ruolo della community</strong> all’interno del progetto, e come essa collabori con il team sia per lo sviluppo di <strong>plugin</strong>, sia per il <strong>report di problemi e bug</strong>.</p>
+<p>Esamineremo poi l’<strong>architettura del programma</strong>, il modo in cui le nuove feature si interfacciano con essa e come l’architettura si sia evoluta nel tempo.</p>
+<p>Infine, concluderemo guardando la <strong>presentazione del team</strong>, i loro <strong>valori</strong> e la loro <strong>filosofia lavorativa</strong>, con particolare enfasi sulla <strong>metodologia di comunicazione</strong>, cercando di individuare eventuali correlazioni con l’<strong>Extreme Programming (XP)</strong>.</p>
+<h3 id="da-dove-nascono-le-nuove-feature">Da dove nascono le nuove feature?<a hidden class="anchor" aria-hidden="true" href="#da-dove-nascono-le-nuove-feature">#</a></h3>
+<p>Per l’ideazione di nuove feature, il team di Logseq si rivolge spesso alla <strong>community</strong>, attraverso il proprio <strong>forum di discussione</strong>:
+👉 <a href="https://discuss.logseq.com/">https://discuss.logseq.com</a></p>
+<p>All’interno del forum esiste una sezione chiamata <strong>“Feature Request”</strong>, dove qualsiasi utente registrato può proporre nuove funzionalità attraverso un post pubblico.
+Con un sistema simile a <strong>Reddit</strong>, i post possono essere <strong>votati</strong>, permettendo così ai <strong>main developer</strong> di stabilire la priorità delle richieste in base al loro successo nella community.</p>
+<p>📌 <strong>Esempio:</strong>
 Un utente ha chiesto l’introduzione degli <em>Headings</em> (titoli più grandi) in questo post:
-👉 Headings where they at?</p><p>Il post ha ricevuto molti commenti e voti, e nel giro di <strong>5 mesi</strong> la funzionalità è stata effettivamente implementata nel programma.</p><p>Anche le <strong>richieste su GitHub</strong> sono attive, ma vengono automaticamente <strong>reindirizzate al forum</strong>, così da raccogliere voti e misurare meglio l’interesse degli utenti (funzionalità che GitHub non offre nativamente).</p><p>📌 <strong>Altro esempio:</strong>
+👉 Headings where they at?</p>
+<p>Il post ha ricevuto molti commenti e voti, e nel giro di <strong>5 mesi</strong> la funzionalità è stata effettivamente implementata nel programma.</p>
+<p>Anche le <strong>richieste su GitHub</strong> sono attive, ma vengono automaticamente <strong>reindirizzate al forum</strong>, così da raccogliere voti e misurare meglio l’interesse degli utenti (funzionalità che GitHub non offre nativamente).</p>
+<p>📌 <strong>Altro esempio:</strong>
 Un utente ha proposto la <strong>personalizzazione delle scorciatoie da tastiera</strong> in questo post:
 👉 Customizable keyboard shortcuts
 La proposta era stata inizialmente fatta su GitHub:
-👉 <a href=https://github.com/logseq/logseq/issues/553>Issue #553 su GitHub</a></p><p>Oltre alle idee provenienti dalla community, il <strong>team di sviluppo</strong> concepisce anche <strong>feature interne</strong>, non presenti né sul blog né su GitHub.
-Questo accade perché il team ha una <strong>visione a lungo termine</strong> del progetto e anche un piano per <strong>sostenersi economicamente</strong>, come vedremo più avanti.</p><p>In sintesi:</p><ul><li>Le <strong>piccole feature</strong> sono spesso guidate dalla <strong>community</strong>.</li><li>Le <strong>funzionalità più grandi o strategiche</strong> sono invece dirette dal <strong>team di sviluppo</strong>.</li></ul><h3 id=dalle-idee-alla-realizzazione>Dalle idee alla realizzazione<a hidden class=anchor aria-hidden=true href=#dalle-idee-alla-realizzazione>#</a></h3><p>Le idee o feature, provenienti sia dalla community che dal team, devono essere <strong>definite e pianificate</strong> prima della realizzazione.
-Per farlo, il team utilizza il metodo delle <strong>“Cards”</strong>.</p><h4 id=-le-cards>🔹 Le “Cards”<a hidden class=anchor aria-hidden=true href=#-le-cards>#</a></h4><p>Una <strong>Card</strong> rappresenta visivamente un’attività o una feature.
-Contiene informazioni come:</p><ul><li>il <strong>riepilogo dell’incarico</strong>,</li><li>la <strong>persona responsabile</strong>,</li><li>eventuali <strong>scadenze</strong> o <strong>checklist</strong>.</li></ul><p>Nel caso di Logseq, le Cards sono <strong>molto semplici</strong>, spesso con pochi commenti e tag.
+👉 <a href="https://github.com/logseq/logseq/issues/553">Issue #553 su GitHub</a></p>
+<p>Oltre alle idee provenienti dalla community, il <strong>team di sviluppo</strong> concepisce anche <strong>feature interne</strong>, non presenti né sul blog né su GitHub.
+Questo accade perché il team ha una <strong>visione a lungo termine</strong> del progetto e anche un piano per <strong>sostenersi economicamente</strong>, come vedremo più avanti.</p>
+<p>In sintesi:</p>
+<ul>
+<li>Le <strong>piccole feature</strong> sono spesso guidate dalla <strong>community</strong>.</li>
+<li>Le <strong>funzionalità più grandi o strategiche</strong> sono invece dirette dal <strong>team di sviluppo</strong>.</li>
+</ul>
+<h3 id="dalle-idee-alla-realizzazione">Dalle idee alla realizzazione<a hidden class="anchor" aria-hidden="true" href="#dalle-idee-alla-realizzazione">#</a></h3>
+<p>Le idee o feature, provenienti sia dalla community che dal team, devono essere <strong>definite e pianificate</strong> prima della realizzazione.
+Per farlo, il team utilizza il metodo delle <strong>“Cards”</strong>.</p>
+<h4 id="-le-cards">🔹 Le “Cards”<a hidden class="anchor" aria-hidden="true" href="#-le-cards">#</a></h4>
+<p>Una <strong>Card</strong> rappresenta visivamente un’attività o una feature.
+Contiene informazioni come:</p>
+<ul>
+<li>il <strong>riepilogo dell’incarico</strong>,</li>
+<li>la <strong>persona responsabile</strong>,</li>
+<li>eventuali <strong>scadenze</strong> o <strong>checklist</strong>.</li>
+</ul>
+<p>Nel caso di Logseq, le Cards sono <strong>molto semplici</strong>, spesso con pochi commenti e tag.
 Per lavori più complessi, includono <strong>liste di compiti</strong> da completare.
-Non sono invece definiti test espliciti da superare, anche se ogni lavoro viene <strong>revisionato da un altro membro del team</strong>.</p><h4 id=-kanban-board>🔹 Kanban Board<a hidden class=anchor aria-hidden=true href=#-kanban-board>#</a></h4><p>Le Cards vengono organizzate in una <strong>tabella Kanban</strong>, uno strumento visivo che mostra lo stato dei lavori.
-La board è divisa in <strong>4 colonne</strong>:</p><ol><li><strong>To-Do</strong></li><li><strong>Doing</strong></li><li><strong>Done</strong></li><li><strong>Long Term</strong></li></ol><p>📍 È consultabile pubblicamente su Trello:
-👉 <a href=https://trello.com/b/8txSM12G/logseq-roadmap>Logseq Roadmap su Trello</a></p><p>Quando una Card viene creata, entra nella colonna <strong>To-Do</strong>.
+Non sono invece definiti test espliciti da superare, anche se ogni lavoro viene <strong>revisionato da un altro membro del team</strong>.</p>
+<h4 id="-kanban-board">🔹 Kanban Board<a hidden class="anchor" aria-hidden="true" href="#-kanban-board">#</a></h4>
+<p>Le Cards vengono organizzate in una <strong>tabella Kanban</strong>, uno strumento visivo che mostra lo stato dei lavori.
+La board è divisa in <strong>4 colonne</strong>:</p>
+<ol>
+<li><strong>To-Do</strong></li>
+<li><strong>Doing</strong></li>
+<li><strong>Done</strong></li>
+<li><strong>Long Term</strong></li>
+</ol>
+<p>📍 È consultabile pubblicamente su Trello:
+👉 <a href="https://trello.com/b/8txSM12G/logseq-roadmap">Logseq Roadmap su Trello</a></p>
+<p>Quando una Card viene creata, entra nella colonna <strong>To-Do</strong>.
 Un membro del team può assegnarsela, spostandola in <strong>Doing</strong>.
-Durante lo sviluppo, viene creato un <strong>branch separato</strong> dal <em>master</em> per lavorare sulla nuova feature.</p><p>Una volta completata, la Card entra nella fase di <strong>Code Review</strong>, dove un altro sviluppatore deve obbligatoriamente verificarla.
-Esiste anche un parametro chiamato <strong>List Limit</strong>: se ci sono troppe Card in revisione, il team dà priorità alle review rispetto a nuovi lavori.</p><p>Dopo la revisione e i test, la Card viene spostata su <strong>Done</strong>, e il codice viene unito al branch principale.
-Il rilascio avviene prima in <strong>versione Early Access</strong>, poi nella <strong>versione stabile</strong>.</p><h4 id=-caso-speciale-la-whiteboard>🔹 Caso speciale: la “Whiteboard”<a hidden class=anchor aria-hidden=true href=#-caso-speciale-la-whiteboard>#</a></h4><p>Una menzione a parte merita la feature <strong>Whiteboard</strong>, progettata come una componente complessa ed esclusiva.
+Durante lo sviluppo, viene creato un <strong>branch separato</strong> dal <em>master</em> per lavorare sulla nuova feature.</p>
+<p>Una volta completata, la Card entra nella fase di <strong>Code Review</strong>, dove un altro sviluppatore deve obbligatoriamente verificarla.
+Esiste anche un parametro chiamato <strong>List Limit</strong>: se ci sono troppe Card in revisione, il team dà priorità alle review rispetto a nuovi lavori.</p>
+<p>Dopo la revisione e i test, la Card viene spostata su <strong>Done</strong>, e il codice viene unito al branch principale.
+Il rilascio avviene prima in <strong>versione Early Access</strong>, poi nella <strong>versione stabile</strong>.</p>
+<h4 id="-caso-speciale-la-whiteboard">🔹 Caso speciale: la “Whiteboard”<a hidden class="anchor" aria-hidden="true" href="#-caso-speciale-la-whiteboard">#</a></h4>
+<p>Una menzione a parte merita la feature <strong>Whiteboard</strong>, progettata come una componente complessa ed esclusiva.
 Per essa è stata creata una <strong>Kanban Board dedicata su GitHub</strong>:
-👉 <a href=https://github.com/orgs/logseq/projects/2/views/1>Whiteboard Project Board</a></p><p>In passato, la Kanban principale si trovava su GitHub:
-👉 <a href=https://github.com/logseq/logseq/projects/1>Vecchia roadmap (dismessa)</a>
-ma dal <strong>2020</strong> è stata spostata definitivamente su Trello.</p><h3 id=bug>Bug<a hidden class=anchor aria-hidden=true href=#bug>#</a></h3><p>Anche per la gestione di <strong>bug e problemi</strong>, Logseq si affida molto alla <strong>community</strong>.
-I developer prediligono la sezione <strong>“Issues”</strong> di GitHub per la segnalazione di fix o bug:</p><p>👉 <a href=https://github.com/logseq/logseq/issues>https://github.com/logseq/logseq/issues</a></p><p>Per la risoluzione, sia i developer che la community possono lavorare direttamente sul codice e poi richiedere un <strong>pull request</strong> sul <em>master branch</em>.
-Solitamente, di queste operazioni si occupano <strong>membri interni del team</strong> o sviluppatori selezionati.</p><p>È possibile anche utilizzare il <strong>blog ufficiale</strong> (che ha una sezione dedicata ai bug report) oppure i <strong>canali Discord</strong>, dove gli sviluppatori sono attivi e disponibili per assistenza diretta:</p><p>👉 Post ufficiale: Please post bug reports to GitHub if you can</p><hr><h3 id=ambito-economico-del-progetto>Ambito economico del progetto<a hidden class=anchor aria-hidden=true href=#ambito-economico-del-progetto>#</a></h3><p>Logseq è un progetto <strong>open source</strong> con licenza <strong>AGPL-3.0</strong>, quindi <strong>completamente gratuito</strong>.
-Per supportare il team, è possibile effettuare <strong>donazioni una tantum o ricorrenti</strong> tramite la piattaforma <strong>Open Collective</strong>:</p><p>👉 <a href=https://opencollective.com/logseq>https://opencollective.com/logseq</a></p><p>In base all’importo donato, si possono ottenere <strong>vantaggi esclusivi</strong>, come:</p><ul><li>accesso alle <strong>versioni Early Access</strong>,</li><li><strong>badge su Discord</strong>,</li><li><strong>menzioni come sponsor</strong> sul sito ufficiale e sulla pagina GitHub.</li></ul><p>Il progetto è nato dalla mente del developer <strong>Tienson</strong>, inizialmente finanziato da <strong>Angel Investors</strong>.
-Attualmente il team è composto da <strong>10 developer</strong>, con <strong>compensi annuali</strong> e una <strong>quota di equity</strong> sul progetto.</p><p>Inoltre, Logseq ha ricevuto investimenti da <strong>grandi nomi del settore tech</strong>, tra cui:
+👉 <a href="https://github.com/orgs/logseq/projects/2/views/1">Whiteboard Project Board</a></p>
+<p>In passato, la Kanban principale si trovava su GitHub:
+👉 <a href="https://github.com/logseq/logseq/projects/1">Vecchia roadmap (dismessa)</a>
+ma dal <strong>2020</strong> è stata spostata definitivamente su Trello.</p>
+<h3 id="bug">Bug<a hidden class="anchor" aria-hidden="true" href="#bug">#</a></h3>
+<p>Anche per la gestione di <strong>bug e problemi</strong>, Logseq si affida molto alla <strong>community</strong>.
+I developer prediligono la sezione <strong>“Issues”</strong> di GitHub per la segnalazione di fix o bug:</p>
+<p>👉 <a href="https://github.com/logseq/logseq/issues">https://github.com/logseq/logseq/issues</a></p>
+<p>Per la risoluzione, sia i developer che la community possono lavorare direttamente sul codice e poi richiedere un <strong>pull request</strong> sul <em>master branch</em>.
+Solitamente, di queste operazioni si occupano <strong>membri interni del team</strong> o sviluppatori selezionati.</p>
+<p>È possibile anche utilizzare il <strong>blog ufficiale</strong> (che ha una sezione dedicata ai bug report) oppure i <strong>canali Discord</strong>, dove gli sviluppatori sono attivi e disponibili per assistenza diretta:</p>
+<p>👉 Post ufficiale: Please post bug reports to GitHub if you can</p>
+<hr>
+<h3 id="ambito-economico-del-progetto">Ambito economico del progetto<a hidden class="anchor" aria-hidden="true" href="#ambito-economico-del-progetto">#</a></h3>
+<p>Logseq è un progetto <strong>open source</strong> con licenza <strong>AGPL-3.0</strong>, quindi <strong>completamente gratuito</strong>.
+Per supportare il team, è possibile effettuare <strong>donazioni una tantum o ricorrenti</strong> tramite la piattaforma <strong>Open Collective</strong>:</p>
+<p>👉 <a href="https://opencollective.com/logseq">https://opencollective.com/logseq</a></p>
+<p>In base all’importo donato, si possono ottenere <strong>vantaggi esclusivi</strong>, come:</p>
+<ul>
+<li>accesso alle <strong>versioni Early Access</strong>,</li>
+<li><strong>badge su Discord</strong>,</li>
+<li><strong>menzioni come sponsor</strong> sul sito ufficiale e sulla pagina GitHub.</li>
+</ul>
+<p>Il progetto è nato dalla mente del developer <strong>Tienson</strong>, inizialmente finanziato da <strong>Angel Investors</strong>.
+Attualmente il team è composto da <strong>10 developer</strong>, con <strong>compensi annuali</strong> e una <strong>quota di equity</strong> sul progetto.</p>
+<p>Inoltre, Logseq ha ricevuto investimenti da <strong>grandi nomi del settore tech</strong>, tra cui:
 Airbnb, Instagram, Quora, Neuralink, SpaceX, Facebook, Stripe, GitHub, Shopify, Uber e AngelList.
-(📄 Fonte: Design & Frontend Engineer – Notion Page)</p><p>Nonostante questo, il <strong>reddito attuale non è ancora sufficiente</strong>, e tra gli obiettivi futuri c’è quello di <strong>aumentare la monetizzazione</strong>.</p><p>Il team prevede infatti di lanciare una versione <strong>Logseq Pro</strong>, <strong>a pagamento e closed source</strong>, con vantaggi come:</p><ul><li><strong>database sincronizzato tra dispositivi</strong> su server proprietari (sul modello di Roam Research),</li><li><strong>feature esclusive</strong> anche per chi sceglie di mantenere un database locale.</li></ul><p>In futuro, quindi, Logseq si dividerà in due rami:</p><ul><li><strong>Logseq Pro</strong> → closed source e a pagamento</li><li><strong>Logseq Standard</strong> → open source e gratuito, costantemente mantenuto</li></ul><p>📚 Riferimenti:</p><ul><li><a href=https://docs.logseq.com/#/page/faq>FAQ ufficiale</a></li><li><a href=https://discuss.logseq.com/t/what-is-logseqs-business-model/389/3>Discussione: What is Logseq’s business model?</a></li></ul><hr><h3 id=community>Community<a hidden class=anchor aria-hidden=true href=#community>#</a></h3><p>La <strong>community</strong> gioca un ruolo fondamentale non solo nell’ideazione di nuove feature, ma anche nella <strong>segnalazione di bug</strong> e nella <strong>collaborazione tecnica</strong>.</p><p>Per quanto riguarda lo sviluppo, la community può contribuire <strong>attraverso la creazione di plugin</strong>.
-Anche se, in teoria, chiunque può modificare il codice sorgente (essendo open source), la **branch principale (master)**rimane sotto il controllo del team ufficiale.</p><h4 id=-requisiti-per-i-plugin>🔹 Requisiti per i plugin<a hidden class=anchor aria-hidden=true href=#-requisiti-per-i-plugin>#</a></h4><p>I plugin devono:</p><ol><li><strong>Garantire privacy e sicurezza</strong> dei dati dell’utente.</li><li><strong>Non duplicare funzionalità già presenti</strong> nel programma.</li></ol><p>Per pubblicare un plugin, basta creare un <strong>fork</strong> del repository e inviare una <strong>pull request</strong> al progetto <em>Marketplace Packages</em>su GitHub:
-👉 <a href=https://github.com/logseq/marketplace>https://github.com/logseq/marketplace</a></p><p>I plugin approvati vengono automaticamente inseriti nel <strong>marketplace integrato</strong> nel programma, completamente gratuito.</p><h4 id=-contributi-alla-documentazione>🔹 Contributi alla documentazione<a hidden class=anchor aria-hidden=true href=#-contributi-alla-documentazione>#</a></h4><p>La community contribuisce anche alla <strong>documentazione</strong>, sia interna che esterna.</p><ul><li><strong>Documentazione interna:</strong> tutorial e linee guida integrate nel programma.
-→ Contributo via <em>fork + pull request</em> su GitHub.</li><li><strong>Documentazione esterna:</strong> articoli, guide e contenuti su blog o piattaforme esterne.
-→ Partecipazione libera attraverso il forum.</li></ul><p>📚 Riferimenti:</p><ul><li>How to contribute to Logseq’s documentation (post 1)</li><li>How to contribute to Logseq’s documentation (post 2)</li></ul><hr><h3 id=architettura>Architettura<a hidden class=anchor aria-hidden=true href=#architettura>#</a></h3><p>In origine, l’<strong>architettura di Logseq</strong> era <strong>monolitica</strong>: ogni nuova feature o componente interagiva direttamente con il <strong>Datascript</strong>, limitando la modularità e la scalabilità del codice.</p><p>Per risolvere questi problemi, il team ha effettuato un <strong>profondo refactoring</strong>.
-Attualmente, Logseq è composto da due principali componenti:</p><ol><li><strong>Logseq Plugin Core</strong> – interfaccia tra i plugin e il sistema principale.</li><li><strong>Logseq Core</strong> – motore dell’applicazione, gestisce editing, blocchi e funzioni base.</li></ol><ul><li>I <strong>plugin della community</strong> interagiscono con il <strong>Plugin Core</strong>.</li><li>Gli <strong>Official Plugins</strong>, invece, comunicano direttamente con il <strong>Core</strong> (es. motore di ricerca, temi base, ecc.).</li></ul><p>Questa architettura modulare consente:</p><ul><li>maggiore <strong>sicurezza</strong> nell’esecuzione dei plugin,</li><li>sviluppo più <strong>isolato e indipendente</strong> delle singole componenti,</li><li>miglior <strong>gestione degli errori</strong> e <strong>delle nuove feature</strong>.</li></ul><p>📚 Riferimento:
-[The Refactoring of Logseq](<a href=https://docs.logseq.com/#/page/The>https://docs.logseq.com/#/page/The</a> Refactoring Of Logseq)</p><hr><h3 id=valori-metodologia-di-lavoro-e-correlazioni-con-lxp>Valori, metodologia di lavoro e correlazioni con l’XP<a hidden class=anchor aria-hidden=true href=#valori-metodologia-di-lavoro-e-correlazioni-con-lxp>#</a></h3><p>La filosofia e la metodologia di lavoro del team Logseq sono descritte nella seguente pagina:
-👉 Who is Logseq – Notion</p><p>Pur non dichiarando esplicitamente l’adesione all’<strong>Extreme Programming (XP)</strong>, si possono notare <strong>molte analogie</strong>.</p><h4 id=-comunicazione>🔹 Comunicazione<a hidden class=anchor aria-hidden=true href=#-comunicazione>#</a></h4><blockquote><p>“Noi condividiamo apertamente, ampiamente e deliberatamente e siamo straordinariamente sinceri gli uni con gli altri.”</p></blockquote><p>Il team lavora <strong>in modo asincrono</strong>, da luoghi e fusi orari diversi.
-La comunicazione avviene quindi tramite <strong>note e messaggi scritti</strong>, che rendono più diretto e veloce lo scambio di idee.</p><p>Tutti possono comunicare con chiunque — anche l’ultimo programmatore con il cliente — proprio come nel modello XP.
-Questo approccio genera <strong>feedback continui e immediati</strong>, sia con la community sia all’interno del team.</p><p>📍 Forum: <a href=https://discuss.logseq.com/>https://discuss.logseq.com</a></p><h4 id=-valori-condivisi>🔹 Valori condivisi<a hidden class=anchor aria-hidden=true href=#-valori-condivisi>#</a></h4><ul><li><p><strong>Coraggio e libertà di sperimentare:</strong></p><blockquote><p>“Il rischio è direttamente proporzionale all’impatto.”
-Come nell’XP, serve coraggio nel prendere decisioni importanti e nell’ammettere eventuali errori passati.</p></blockquote></li><li><p><strong>Ritmo sostenibile:</strong></p><blockquote><p>“È una maratona, non uno sprint.”
-Il lavoro è flessibile e bilanciato: ferie pagate, incentivi per studio e salute, piani assicurativi, ecc.</p></blockquote></li><li><p><strong>Action-Oriented:</strong>
-Il team privilegia un approccio <strong>pratico e iterativo</strong>, con <strong>release frequenti e leggere</strong>.</p></li></ul><p>📈 Esempio su GitHub:</p><ul><li>v0.8.2 → rilasciata 6 giorni fa</li><li>v0.8.1 → 12 giorni fa</li><li>v0.8.0 → 20 giorni fa
-👉 <a href=https://github.com/logseq/logseq/releases>Changelog su GitHub</a></li></ul><h4 id=-organizzazione-del-lavoro>🔹 Organizzazione del lavoro<a hidden class=anchor aria-hidden=true href=#-organizzazione-del-lavoro>#</a></h4><p>Il flusso di lavoro è strutturato come nell’XP:</p><ul><li>attività rappresentate da <strong>Cards</strong>,</li><li>gestione tramite <strong>tabella Kanban</strong>,</li><li>focus su <strong>refactoring continuo</strong> e miglioramento del codice.</li></ul><p>Un grande refactoring ha già portato a un’architettura più pulita e performante, ma il team continua a ottimizzare:</p><ul><li>caricamento di pagine molto grandi,</li><li>reattività delle query,</li><li>uso della memoria oltre 10k note,</li><li>gestione delle pagine lunghe.</li></ul><p>📍 <a href=https://trello.com/c/68pohS4z/1125-performance-improvement>Card di riferimento su Trello</a></p><p>Il <strong>core di Logseq</strong> gestisce numerose operazioni su file, stringhe e caratteri Unicode, quindi la performance è un aspetto fondamentale e costantemente monitorato.</p><h4 id=-pair-programming>🔹 Pair Programming<a hidden class=anchor aria-hidden=true href=#-pair-programming>#</a></h4><p>L’unico aspetto mancante rispetto all’XP è il <strong>pair programming</strong>, quasi impossibile da applicare in un team completamente remoto e asincrono.
-Infatti, nella Kanban board, a ogni <em>Card</em> è solitamente assegnato <strong>un solo sviluppatore</strong>.</p><p>📚 Ulteriore riferimento:
-[The Refactoring of Logseq](<a href=https://docs.logseq.com/#/page/The>https://docs.logseq.com/#/page/The</a> Refactoring Of Logseq)</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://AleClaudio1999.github.io/alessandroclaudiodamo/tags/first/>First</a></li></ul><nav class=paginav><a class=prev href=https://AleClaudio1999.github.io/alessandroclaudiodamo/portfolio/progetto1/><span class=title>« Prev</span><br><span>Cross-core interference - An Ubuntu and OpenEuler experience</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Analisi di Logseq on x" href="https://x.com/intent/tweet/?text=Analisi%20di%20Logseq&amp;url=https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f&amp;hashtags=first"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Analisi di Logseq on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f&amp;title=Analisi%20di%20Logseq&amp;summary=Analisi%20di%20Logseq&amp;source=https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Analisi di Logseq on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f&title=Analisi%20di%20Logseq"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Analisi di Logseq on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Analisi di Logseq on whatsapp" href="https://api.whatsapp.com/send?text=Analisi%20di%20Logseq%20-%20https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Analisi di Logseq on telegram" href="https://telegram.me/share/url?text=Analisi%20di%20Logseq&amp;url=https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentColor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Analisi di Logseq on ycombinator" href="https://news.ycombinator.com/submitlink?t=Analisi%20di%20Logseq&u=https%3a%2f%2fAleClaudio1999.github.io%2falessandroclaudiodamo%2fportfolio%2fprogetto2%2f"><svg width="30" height="30" viewBox="0 0 512 512" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446zM183.8767 87.9921h-62.034L230.6673 292.4508V424.0079h50.6655V292.4508L390.1575 87.9921H328.1233L256 238.2489z"/></svg></a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://AleClaudio1999.github.io/alessandroclaudiodamo/>AlessandroClaudioDamo</a></span> ·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>
+(📄 Fonte: Design &amp; Frontend Engineer – Notion Page)</p>
+<p>Nonostante questo, il <strong>reddito attuale non è ancora sufficiente</strong>, e tra gli obiettivi futuri c’è quello di <strong>aumentare la monetizzazione</strong>.</p>
+<p>Il team prevede infatti di lanciare una versione <strong>Logseq Pro</strong>, <strong>a pagamento e closed source</strong>, con vantaggi come:</p>
+<ul>
+<li><strong>database sincronizzato tra dispositivi</strong> su server proprietari (sul modello di Roam Research),</li>
+<li><strong>feature esclusive</strong> anche per chi sceglie di mantenere un database locale.</li>
+</ul>
+<p>In futuro, quindi, Logseq si dividerà in due rami:</p>
+<ul>
+<li><strong>Logseq Pro</strong> → closed source e a pagamento</li>
+<li><strong>Logseq Standard</strong> → open source e gratuito, costantemente mantenuto</li>
+</ul>
+<p>📚 Riferimenti:</p>
+<ul>
+<li><a href="https://docs.logseq.com/#/page/faq">FAQ ufficiale</a></li>
+<li><a href="https://discuss.logseq.com/t/what-is-logseqs-business-model/389/3">Discussione: What is Logseq’s business model?</a></li>
+</ul>
+<hr>
+<h3 id="community">Community<a hidden class="anchor" aria-hidden="true" href="#community">#</a></h3>
+<p>La <strong>community</strong> gioca un ruolo fondamentale non solo nell’ideazione di nuove feature, ma anche nella <strong>segnalazione di bug</strong> e nella <strong>collaborazione tecnica</strong>.</p>
+<p>Per quanto riguarda lo sviluppo, la community può contribuire <strong>attraverso la creazione di plugin</strong>.
+Anche se, in teoria, chiunque può modificare il codice sorgente (essendo open source), la **branch principale (master)**rimane sotto il controllo del team ufficiale.</p>
+<h4 id="-requisiti-per-i-plugin">🔹 Requisiti per i plugin<a hidden class="anchor" aria-hidden="true" href="#-requisiti-per-i-plugin">#</a></h4>
+<p>I plugin devono:</p>
+<ol>
+<li><strong>Garantire privacy e sicurezza</strong> dei dati dell’utente.</li>
+<li><strong>Non duplicare funzionalità già presenti</strong> nel programma.</li>
+</ol>
+<p>Per pubblicare un plugin, basta creare un <strong>fork</strong> del repository e inviare una <strong>pull request</strong> al progetto <em>Marketplace Packages</em>su GitHub:
+👉 <a href="https://github.com/logseq/marketplace">https://github.com/logseq/marketplace</a></p>
+<p>I plugin approvati vengono automaticamente inseriti nel <strong>marketplace integrato</strong> nel programma, completamente gratuito.</p>
+<h4 id="-contributi-alla-documentazione">🔹 Contributi alla documentazione<a hidden class="anchor" aria-hidden="true" href="#-contributi-alla-documentazione">#</a></h4>
+<p>La community contribuisce anche alla <strong>documentazione</strong>, sia interna che esterna.</p>
+<ul>
+<li><strong>Documentazione interna:</strong> tutorial e linee guida integrate nel programma.
+→ Contributo via <em>fork + pull request</em> su GitHub.</li>
+<li><strong>Documentazione esterna:</strong> articoli, guide e contenuti su blog o piattaforme esterne.
+→ Partecipazione libera attraverso il forum.</li>
+</ul>
+<p>📚 Riferimenti:</p>
+<ul>
+<li>How to contribute to Logseq’s documentation (post 1)</li>
+<li>How to contribute to Logseq’s documentation (post 2)</li>
+</ul>
+<hr>
+<h3 id="architettura">Architettura<a hidden class="anchor" aria-hidden="true" href="#architettura">#</a></h3>
+<p>In origine, l’<strong>architettura di Logseq</strong> era <strong>monolitica</strong>: ogni nuova feature o componente interagiva direttamente con il <strong>Datascript</strong>, limitando la modularità e la scalabilità del codice.</p>
+<p>Per risolvere questi problemi, il team ha effettuato un <strong>profondo refactoring</strong>.
+Attualmente, Logseq è composto da due principali componenti:</p>
+<ol>
+<li><strong>Logseq Plugin Core</strong> – interfaccia tra i plugin e il sistema principale.</li>
+<li><strong>Logseq Core</strong> – motore dell’applicazione, gestisce editing, blocchi e funzioni base.</li>
+</ol>
+<ul>
+<li>I <strong>plugin della community</strong> interagiscono con il <strong>Plugin Core</strong>.</li>
+<li>Gli <strong>Official Plugins</strong>, invece, comunicano direttamente con il <strong>Core</strong> (es. motore di ricerca, temi base, ecc.).</li>
+</ul>
+<p>Questa architettura modulare consente:</p>
+<ul>
+<li>maggiore <strong>sicurezza</strong> nell’esecuzione dei plugin,</li>
+<li>sviluppo più <strong>isolato e indipendente</strong> delle singole componenti,</li>
+<li>miglior <strong>gestione degli errori</strong> e <strong>delle nuove feature</strong>.</li>
+</ul>
+<p>📚 Riferimento:
+[The Refactoring of Logseq](<a href="https://docs.logseq.com/#/page/The">https://docs.logseq.com/#/page/The</a> Refactoring Of Logseq)</p>
+<hr>
+<h3 id="valori-metodologia-di-lavoro-e-correlazioni-con-lxp">Valori, metodologia di lavoro e correlazioni con l’XP<a hidden class="anchor" aria-hidden="true" href="#valori-metodologia-di-lavoro-e-correlazioni-con-lxp">#</a></h3>
+<p>La filosofia e la metodologia di lavoro del team Logseq sono descritte nella seguente pagina:
+👉 Who is Logseq – Notion</p>
+<p>Pur non dichiarando esplicitamente l’adesione all’<strong>Extreme Programming (XP)</strong>, si possono notare <strong>molte analogie</strong>.</p>
+<h4 id="-comunicazione">🔹 Comunicazione<a hidden class="anchor" aria-hidden="true" href="#-comunicazione">#</a></h4>
+<blockquote>
+<p>“Noi condividiamo apertamente, ampiamente e deliberatamente e siamo straordinariamente sinceri gli uni con gli altri.”</p></blockquote>
+<p>Il team lavora <strong>in modo asincrono</strong>, da luoghi e fusi orari diversi.
+La comunicazione avviene quindi tramite <strong>note e messaggi scritti</strong>, che rendono più diretto e veloce lo scambio di idee.</p>
+<p>Tutti possono comunicare con chiunque — anche l’ultimo programmatore con il cliente — proprio come nel modello XP.
+Questo approccio genera <strong>feedback continui e immediati</strong>, sia con la community sia all’interno del team.</p>
+<p>📍 Forum: <a href="https://discuss.logseq.com/">https://discuss.logseq.com</a></p>
+<h4 id="-valori-condivisi">🔹 Valori condivisi<a hidden class="anchor" aria-hidden="true" href="#-valori-condivisi">#</a></h4>
+<ul>
+<li>
+<p><strong>Coraggio e libertà di sperimentare:</strong></p>
+<blockquote>
+<p>“Il rischio è direttamente proporzionale all’impatto.”
+Come nell’XP, serve coraggio nel prendere decisioni importanti e nell’ammettere eventuali errori passati.</p></blockquote>
+</li>
+<li>
+<p><strong>Ritmo sostenibile:</strong></p>
+<blockquote>
+<p>“È una maratona, non uno sprint.”
+Il lavoro è flessibile e bilanciato: ferie pagate, incentivi per studio e salute, piani assicurativi, ecc.</p></blockquote>
+</li>
+<li>
+<p><strong>Action-Oriented:</strong>
+Il team privilegia un approccio <strong>pratico e iterativo</strong>, con <strong>release frequenti e leggere</strong>.</p>
+</li>
+</ul>
+<p>📈 Esempio su GitHub:</p>
+<ul>
+<li>v0.8.2 → rilasciata 6 giorni fa</li>
+<li>v0.8.1 → 12 giorni fa</li>
+<li>v0.8.0 → 20 giorni fa
+👉 <a href="https://github.com/logseq/logseq/releases">Changelog su GitHub</a></li>
+</ul>
+<h4 id="-organizzazione-del-lavoro">🔹 Organizzazione del lavoro<a hidden class="anchor" aria-hidden="true" href="#-organizzazione-del-lavoro">#</a></h4>
+<p>Il flusso di lavoro è strutturato come nell’XP:</p>
+<ul>
+<li>attività rappresentate da <strong>Cards</strong>,</li>
+<li>gestione tramite <strong>tabella Kanban</strong>,</li>
+<li>focus su <strong>refactoring continuo</strong> e miglioramento del codice.</li>
+</ul>
+<p>Un grande refactoring ha già portato a un’architettura più pulita e performante, ma il team continua a ottimizzare:</p>
+<ul>
+<li>caricamento di pagine molto grandi,</li>
+<li>reattività delle query,</li>
+<li>uso della memoria oltre 10k note,</li>
+<li>gestione delle pagine lunghe.</li>
+</ul>
+<p>📍 <a href="https://trello.com/c/68pohS4z/1125-performance-improvement">Card di riferimento su Trello</a></p>
+<p>Il <strong>core di Logseq</strong> gestisce numerose operazioni su file, stringhe e caratteri Unicode, quindi la performance è un aspetto fondamentale e costantemente monitorato.</p>
+<h4 id="-pair-programming">🔹 Pair Programming<a hidden class="anchor" aria-hidden="true" href="#-pair-programming">#</a></h4>
+<p>L’unico aspetto mancante rispetto all’XP è il <strong>pair programming</strong>, quasi impossibile da applicare in un team completamente remoto e asincrono.
+Infatti, nella Kanban board, a ogni <em>Card</em> è solitamente assegnato <strong>un solo sviluppatore</strong>.</p>
+<p>📚 Ulteriore riferimento:
+[The Refactoring of Logseq](<a href="https://docs.logseq.com/#/page/The">https://docs.logseq.com/#/page/The</a> Refactoring Of Logseq)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/first/">First</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/portfolio/progetto1/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Cross-core interference - An Ubuntu and OpenEuler experience</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Alessandro Claudio Damo</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
