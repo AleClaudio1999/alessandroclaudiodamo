@@ -10,3 +10,4 @@ Questo è il mio curriculum vitae:
 
 -Laureato in Ingegneria informatica Unipd 2024
 
+-Tennista ;P
