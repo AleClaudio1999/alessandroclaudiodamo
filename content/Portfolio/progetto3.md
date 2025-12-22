@@ -1,4 +1,34 @@
-# Application of the NIST Cybersecurity Framework 2.0 and the OWASP Risk Rating Methodology Using Artificial Intelligence
+---
+title: "Application of the NIST Cybersecurity Framework 2.0 and the OWASP Risk Rating Methodology Using Artificial Intelligence"
+date: 2025-07-15T11:30:03+00:00
+# weight: 1
+# aliases: ["/first"]
+tags: ["first"]
+# author: ["Me", "You"] # multiple authors
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+description: "Lavoro conclusivo per il corso di security and risk: management and certifications"
+canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: true
+cover:
+    image: "<image path/url>" # image path/url
+    alt: "<alt text>" # alt text
+    caption: "<text>" # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: true # only hide on current single page
+---
 
 This work presents a cybersecurity assessment developed as part of the course *Security and Risk: Management and Certifications*, using an AI system based on a Retrieval-Augmented Generation (RAG) architecture.
 
