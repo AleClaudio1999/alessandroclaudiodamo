@@ -1,6 +1,6 @@
 ---
 title: "Application of the NIST Cybersecurity Framework 2.0 and the OWASP Risk Rating Methodology Using Artificial Intelligence"
-date: 2025-07-15T11:30:03+00:00
+date: 2022-09-15T11:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
 tags: ["first"]
