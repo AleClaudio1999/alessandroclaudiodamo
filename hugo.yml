@@ -2,10 +2,12 @@ baseURL: "https://aleclaudio1999.github.io/alessandroclaudiodamo/"
 languageCode: "en-us"
 title: Alessandro Claudio Damo
 theme: PaperMod
+enableRobotsTXT: true
 
 params:
   defaultTheme: auto
   disableThemeToggle: false
+  googleSiteVerification: "ejoT6EeK8heJ1bmPxKZYwuTDnmTDAfMQ_NKDih18uP8"
 
 ####
 menu:

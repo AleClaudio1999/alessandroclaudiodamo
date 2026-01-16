@@ -1395,7 +1395,8 @@ The schedulability analysis of each task set was carried out on a single core, u
 We solve each task’s response time using a fixed-point iterative approach, from which schedulability of the task set can be easily determined.</p>
 <p>In this formula, we will ignore the blocking time since the paper explicitly states that <strong>all tasks are independent and do not share any resources</strong>:</p>
 <blockquote>
-<p><em>“All tasks are independent of each other without any shared resources among them.”</em></p></blockquote>
+<p><em>“All tasks are independent of each other without any shared resources among them.”</em></p>
+</blockquote>
 <p>By definition, this implies that the blocking time is null.</p>
 <h4 id="table-vii---schedulability-of-real-time-task-sets-under-fixed-priority-scheduling-with-cross-core-interference">Table VII - Schedulability of real-time task sets under Fixed-Priority scheduling with cross-core interference<a hidden class="anchor" aria-hidden="true" href="#table-vii---schedulability-of-real-time-task-sets-under-fixed-priority-scheduling-with-cross-core-interference">#</a></h4>
 <p>This table shows the percentage of schedulable task sets under fixed-priority scheduling as total utilization (U) increases. Schedulability was calculated by including the delay caused by cross-core interference measured in Section 3.3. Higher percentages indicate better schedulability.</p>
@@ -1526,10 +1527,12 @@ The experiment is conducted across different node topologies (<em>sierra_nevada<
 This is consistent with the results shown in Figure 5 of the paper (where we unfortunately did not capture a rare TLB flush event), which also demonstrates that interference events persist in openEuler. The reason why, despite core isolation and the use of openEuler with <em>interference-free</em> mechanisms, some events (e.g., residual IPIs) still occur is clearly explained in <strong>Lesson 3: Synchronization Mechanism Suitable for Isolation</strong> of the paper.</p>
 <p>The authors state:</p>
 <blockquote>
-<p><em>“In existing Linux, it is almost impossible to completely eliminate synchronization between cores. Thus, we can hardly avoid the interference introduced by synchronization. Our current effort alleviates the interference, but it cannot fully address the interference because we did not choose to completely redesign the synchronization system.”</em></p></blockquote>
+<p><em>“In existing Linux, it is almost impossible to completely eliminate synchronization between cores. Thus, we can hardly avoid the interference introduced by synchronization. Our current effort alleviates the interference, but it cannot fully address the interference because we did not choose to completely redesign the synchronization system.”</em></p>
+</blockquote>
 <p>In short, in current Linux <strong>it is impossible to fully eliminate inter-core synchronization</strong>, and therefore some interference is inevitable. Their intervention greatly mitigated the issue, but did not resolve it completely, precisely because they chose not to redesign the synchronization system from scratch (to avoid compromising fundamental kernel logic). This also connects to other reasons highlighted in <strong>Lesson 1</strong> of the paper:</p>
 <blockquote>
-<p><em>“It is impossible to fix all cross-core interference bugs in Linux. The key reason is that Linux does not have a well-designed mechanism to enforce isolation between cores.”</em></p></blockquote>
+<p><em>“It is impossible to fix all cross-core interference bugs in Linux. The key reason is that Linux does not have a well-designed mechanism to enforce isolation between cores.”</em></p>
+</blockquote>
 <p>It should also be noted that the <strong>limitation observed during isolation</strong> (see chapter 7.2) did not cause major problems in the subsequent experiments, which remained consistent with the results in the paper. This issue likely introduced additional interference and worsened the results, but in a <strong>uniform way across all three kernels</strong>, such that proportionality among them was preserved.</p>
 <p>Regarding the <strong>maximum latency calculation</strong>, the data are consistent not only with the paper but also with the Ftrace event counts: <strong>openEuler is lower and similar to RT</strong>, while Vanilla is much worse. The relative differences between the kernels align with the paper, although the baseline latency achieved in openEuler is drastically different (12 µs versus 72 µs). This discrepancy is certainly due to hardware differences, yet the overall consistency is still acceptable. As we will see later, the improvement in maximum latency also has consequences for schedulability.</p>
 <p>The results of Figure 6a, however, are less aligned. Looking at the critical data, we expected decreasing results across all three kernels, since increasing the wake-up period should physiologically reduce latency. This occurred only in <strong>openEuler</strong>, partially in <strong>Vanilla</strong>, and very poorly in <strong>Linux RT</strong>, where the data exhibited a veritable <em>rollercoaster</em>. Based on the paper (and the experiments before and after), we expected Linux RT to be clearly better than Vanilla. However, despite Vanilla’s poor performance at a 50 µs wake-up period, its trend is solidly better than that of Linux RT. This unexpected behavior may limit the significance of the experiment, but it still provides an interesting observation: openEuler follows an excellent trend as the temporal load varies outperforming the other two and aligning with theoretical expectations.</p>
@@ -2082,7 +2085,7 @@ U=[0.50,0.60,0.70,0.80,0.85,0.90,0.95,1.00]</p>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/alessandroclaudiodamo/">Alessandro Claudio Damo</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/alessandroclaudiodamo/">Alessandro Claudio Damo</a></span> · 
 
     <span>
         Powered by

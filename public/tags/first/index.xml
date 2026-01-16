@@ -4,7 +4,7 @@
     <title>First on Alessandro Claudio Damo</title>
     <link>http://localhost:1313/alessandroclaudiodamo/tags/first/</link>
     <description>Recent content in First on Alessandro Claudio Damo</description>
-    <generator>Hugo -- 0.150.0</generator>
+    <generator>Hugo -- 0.154.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Sep 2025 11:30:03 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/alessandroclaudiodamo/tags/first/index.xml" rel="self" type="application/rss+xml" />
@@ -21,6 +21,13 @@
       <pubDate>Thu, 15 Sep 2022 11:30:03 +0000</pubDate>
       <guid>http://localhost:1313/alessandroclaudiodamo/portfolio/progetto2/</guid>
       <description>Lavoro conclusivo per il corso di Ingegneria del software</description>
+    </item>
+    <item>
+      <title>Application of the NIST Cybersecurity Framework 2.0 and the OWASP Risk Rating Methodology Using Artificial Intelligence</title>
+      <link>http://localhost:1313/alessandroclaudiodamo/portfolio/progetto3/</link>
+      <pubDate>Thu, 15 Sep 2022 11:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/alessandroclaudiodamo/portfolio/progetto3/</guid>
+      <description>Lavoro conclusivo per il corso di security and risk: management and certifications</description>
     </item>
   </channel>
 </rss>
