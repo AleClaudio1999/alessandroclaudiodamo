@@ -4,7 +4,7 @@ title = 'Portfolio'
 
 +++
 
-## Projects
+
 
 A selection of academic projects focused on operating systems, distributed systems, networking, and security. These works emphasize low-level system analysis, performance evaluation, and real-world experimentation.
 
@@ -32,19 +32,4 @@ This project investigates how Large Language Models influence the workflow of no
 [Read the project](/alessandroclaudiodamo/Progetto__Running_final.pdf)  
 
 This project analyzes the architecture and performance of Ceph, a distributed storage system designed for scalability and fault tolerance. I explored key components such as RADOS, Object Storage Daemons (OSDs), and the CRUSH algorithm for data placement. A test environment was set up to evaluate how parameters like replication factor, number of OSDs, and object size affect system performance. Through experimental benchmarking, I observed clear trade-offs between reliability and throughput. The project provided practical insight into distributed system design and data storage architectures.
-
-==fixed==
-Qui i miei progetti fatti con l'universita
-
-- [Cross-core interference - An Ubuntu and OpenEuler experience](/alessandroclaudiodamo/Realtime-progetto.pdf) *Progetto per Real-Time Kernels and Systems*
-
-- [Gestione del consumo energetico nel kernel Linux](https://thesis.unipd.it/handle/20.500.12608/76157) *Tesi di Laurea Triennale*
-
-- [Comparative Analysis of TCP on Windows and Linux](/alessandroclaudiodamo/Progetto_finale_WNMA.pdf) *Progetto per Wireless Networks for Mobile Applications*
-
-- [Remind Extended: The Impact of LLMs on Novice Reverse Engineers](/alessandroclaudiodamo/REMind_Extended.pdf) *Progetto per Advanced Topics in computer and Network Security*
-
-- [Architectural Analysis and Experimental Evaluation of Ceph Distributed Storage](/alessandroclaudiodamo/Progetto__Running_final.pdf) *Progetto per Runtimes for Concurrency and Distribution*
-
-  
 
