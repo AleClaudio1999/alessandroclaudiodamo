@@ -13,7 +13,7 @@ A selection of academic projects focused on operating systems, distributed syste
 
 This project focuses on the experimental replication of techniques aimed at mitigating cross-core interference in Linux real-time systems. I worked with multiple kernels (Vanilla, RT, and openEuler), applying advanced CPU isolation mechanisms such as `isolcpus`, `nohz_full`, and IRQ affinity. The work involved setting up controlled environments, running latency benchmarks using tools like `cyclictest` and `oslat`, and evaluating schedulability under different configurations. The results show that while interference cannot be fully eliminated, proper kernel tuning significantly improves latency stability. This project provided hands-on experience with kernel-level performance tuning and real-time system behavior.
 
-### Energy Management in the Linux Kernel (Bachelor Thesis)  
+### Energy Management in the Linux Kernel (Bachelor Thesis)  (Ita)
 [Read the thesis](https://thesis.unipd.it/handle/20.500.12608/76157)  
 
 This thesis explores how the Linux kernel manages energy consumption through various subsystems and mechanisms. The work covers ACPI for hardware-level power control, Dynamic Voltage and Frequency Scaling (DVFS) for CPU optimization, and runtime power management for device-level energy savings. I analyzed how these components interact within the kernel, studying both their theoretical design and their practical implementation. The project highlights the trade-offs between performance and energy efficiency, especially in modern computing environments. It strengthened my understanding of operating system internals and low-level resource management.
